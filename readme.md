@@ -10,7 +10,7 @@
 self.tableView.enablePlaceHolderView = YES;
 ```
 ##### 效果图
-![sds](tableView.gif)
+![sds](tableview.gif)
 
 ##### CollectionView
 ```
