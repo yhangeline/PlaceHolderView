@@ -38,6 +38,7 @@
     //只需打开这个属性
     self.tableView.enablePlaceHolderView = YES;
     
+    
 }
 
 - (void)didReceiveMemoryWarning {
