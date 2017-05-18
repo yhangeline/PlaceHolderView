@@ -5,7 +5,11 @@
 ### 使用方法
 
 ##### TableView
+
 ```
+引入头文件
+#import "UITableView+PlaceHolderView.h"
+
 //只需打开这个属性
 self.tableView.enablePlaceHolderView = YES;
 ```
@@ -14,6 +18,9 @@ self.tableView.enablePlaceHolderView = YES;
 
 ##### CollectionView
 ```
+引入头文件
+#import "UICollectionView+PlaceHolderView.h"
+
 //只需打开这个属性
 self.CollectionView.enablePlaceHolderView = YES;
 ```
@@ -34,3 +41,9 @@ self.tableView.yh_PlaceHolderView = ?(你自定义的View)
 ```
 
 
+### 安装
+#### Cocoapods
+1.在 Podfile 中添加 ```pod "YHPlaceHolderView" ```   
+2.执行 ```pod install``` 或 ```pod update```
+#### 手动安装
+1.下载demo将PlaceHolderView文件夹添加到你的工程
