@@ -17,6 +17,7 @@ static NSString * const reuseIdentifier = @"Cell";
 @implementation CollectionViewController
 {
     NSInteger _count;
+    NSInteger _sectionCount;
 }
 - (void)btnClick:(UIButton *)sender
 {
@@ -28,7 +29,6 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    _count = 50;
     UIButton *btn = [UIButton buttonWithType:UIButtonTypeCustom];
     btn.frame = CGRectMake(0, 0, 100, 40);
     [btn setTitle:@"清空" forState:UIControlStateNormal];
@@ -43,9 +43,21 @@ static NSString * const reuseIdentifier = @"Cell";
     self.collectionView.collectionViewLayout = layout;
     // Do any additional setup after loading the view.
     
-    self.collectionView.enablePlaceHolderView = YES;
+    self.collectionView.enablePlaceHolderView = YES;//模拟网络请求，延迟2秒
+    [self performSelector:@selector(delayAction) withObject:nil afterDelay:2.0];
+    
 }
-
+- (void)delayAction{
+    
+    if (arc4random()%2 == 0) {
+        _sectionCount = 3;
+        _count = 50;
+    }else{
+        _sectionCount = 1;
+        _count = 0;
+    }
+    [self.collectionView reloadData];
+}
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
