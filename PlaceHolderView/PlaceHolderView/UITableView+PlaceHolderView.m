@@ -25,7 +25,7 @@
 - (void)yh_reloadData
 {
     if (self.enablePlaceHolderView) {
-        NSInteger sectionCount = self.numberOfSections;
+        NSInteger sectionCount = [self.dataSource respondsToSelector:@selector(numberOfSectionsInTableView:)]?[self.dataSource numberOfSectionsInTableView:self]:1;
         NSInteger rowCount = 0;
         for (int i = 0; i < sectionCount; i++) {
             rowCount += [self.dataSource tableView:self numberOfRowsInSection:i];
