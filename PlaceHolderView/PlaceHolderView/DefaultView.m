@@ -20,12 +20,11 @@
         imageView.center = self.center;
         [self addSubview:imageView];
         
-        UILabel *label = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 40)];
-        label.textColor = [UIColor grayColor];
-        label.textAlignment = NSTextAlignmentCenter;
-        label.text = @"没有任何数据^_^";
-        label.center = CGPointMake(self.center.x, self.center.y+120);
-        [self addSubview:label];
+        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 40)];
+        _titleLabel.textColor = [UIColor grayColor];
+        _titleLabel.textAlignment = NSTextAlignmentCenter;
+        _titleLabel.center = CGPointMake(self.center.x, self.center.y+120);
+        [self addSubview:_titleLabel];
     }
     return self;
 }

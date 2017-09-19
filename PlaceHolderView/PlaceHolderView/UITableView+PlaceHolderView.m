@@ -31,6 +31,19 @@
             rowCount += [self.dataSource tableView:self numberOfRowsInSection:i];
         }
         if (rowCount == 0) {
+            if (!self.firstReload) {
+                self.firstReload = YES;
+                if ([self.yh_PlaceHolderView isKindOfClass:[DefaultView class]]) {
+                    DefaultView *defaultView = (DefaultView *)self.yh_PlaceHolderView;
+                    defaultView.titleLabel.text = @"加载数据中...";
+                }
+            }else{
+                if ([self.yh_PlaceHolderView isKindOfClass:[DefaultView class]]) {
+                    DefaultView *defaultView = (DefaultView *)self.yh_PlaceHolderView;
+                    defaultView.titleLabel.text = @"暂无相关数据";
+                }
+                
+            }
             [self addSubview:self.yh_PlaceHolderView];
         }
         else
@@ -50,6 +63,17 @@
 - (BOOL)enablePlaceHolderView
 {
     NSNumber *number = objc_getAssociatedObject(self, @selector(enablePlaceHolderView));
+    return number.boolValue;
+}
+
+- (void)setFirstReload:(BOOL)firstReload
+{
+    objc_setAssociatedObject(self, @selector(firstReload), @(firstReload), OBJC_ASSOCIATION_RETAIN_NONATOMIC);
+}
+
+- (BOOL)firstReload
+{
+    NSNumber *number = objc_getAssociatedObject(self, @selector(firstReload));
     return number.boolValue;
 }
 
