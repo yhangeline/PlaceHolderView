@@ -151,6 +151,7 @@
 				TargetAttributes = {
 					F851E5EC1ECAE0DE00A61664 = {
 						CreatedOnToolsVersion = 8.0;
+						DevelopmentTeam = LER7A9JXDL;
 						ProvisioningStyle = Automatic;
 					};
 				};
@@ -318,6 +319,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LER7A9JXDL;
 				INFOPLIST_FILE = PlaceHolderView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yh.PlaceHolderView;
@@ -329,6 +331,7 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				DEVELOPMENT_TEAM = LER7A9JXDL;
 				INFOPLIST_FILE = PlaceHolderView/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = yh.PlaceHolderView;
@@ -355,6 +358,7 @@
 				F851E6061ECAE0DE00A61664 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
