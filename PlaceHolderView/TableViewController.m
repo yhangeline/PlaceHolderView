@@ -15,8 +15,6 @@
 @implementation TableViewController
 {
     NSInteger _count;
-    NSInteger _sectionCount;
-
 }
 - (void)btnClick:(UIButton *)sender
 {
@@ -39,21 +37,9 @@
     
     //只需打开这个属性
     self.tableView.enablePlaceHolderView = YES;
-    //模拟网络请求，延迟2秒
-    [self performSelector:@selector(delayAction) withObject:nil afterDelay:2.0];
-    
+    _count = 20;
 }
-- (void)delayAction{
-    
-    if (arc4random()%2 == 0) {
-        _sectionCount = 3;
-        _count = 50;
-    }else{
-        _sectionCount = 1;
-        _count = 0;
-    }
-    [self.tableView reloadData];
-}
+
 
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];

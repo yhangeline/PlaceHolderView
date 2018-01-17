@@ -14,17 +14,18 @@
 {
     self = [super initWithFrame:frame];
     if (self) {
-        UIImageView *imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
-        imageView.image = [UIImage imageNamed:@"placeHolderImage"];
-        imageView.contentMode = UIViewContentModeScaleAspectFit;
-        imageView.center = self.center;
-        [self addSubview:imageView];
+        self.imageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, 200, 200)];
+        self.imageView.image = [UIImage imageNamed:@"placeHolderImage"];
+        self.imageView.contentMode = UIViewContentModeScaleAspectFit;
+        self.imageView.center = self.center;
+        [self addSubview:self.imageView];
         
-        _titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 40)];
-        _titleLabel.textColor = [UIColor grayColor];
-        _titleLabel.textAlignment = NSTextAlignmentCenter;
-        _titleLabel.center = CGPointMake(self.center.x, self.center.y+120);
-        [self addSubview:_titleLabel];
+        self.titleLabel = [[UILabel alloc] initWithFrame:CGRectMake(0, 0, 300, 40)];
+        self.titleLabel.textColor = [UIColor grayColor];
+        self.titleLabel.textAlignment = NSTextAlignmentCenter;
+        self.titleLabel.center = CGPointMake(self.center.x, self.center.y+120);
+        self.titleLabel.text = @"暂无相关数据^_^";
+        [self addSubview:self.titleLabel];
     }
     return self;
 }
